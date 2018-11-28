@@ -79,9 +79,9 @@ $Options = [ordered]@{
     Mail = if ($Env:mail_user) {
             @{
                 To         = $Env:mail_user
-                From       = $Env:mail_from
+                From       = $Env:mail_user
                 Server     = $Env:mail_server
-                UserName   = $Env:mail_user
+                UserName   = $Env:mail_login
                 Password   = $Env:mail_pass
                 Port       = $Env:mail_port
                 EnableSsl  = $Env:mail_enablessl -eq 'true'
