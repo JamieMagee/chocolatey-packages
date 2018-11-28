@@ -15,7 +15,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $url64   = $download_page.links | ? href -match '^.*jdk8.*.msi$' | % href | select -First 1
-    $version = Split-Path $url -Leaf | Select-String -Pattern '^zulu8\.\d+\.\d+' | foreach {$_.Matches.Value}
+    $version = Split-Path $url64 -Leaf | Select-String -Pattern '^zulu8\.\d+\.\d+' | foreach {$_.Matches.Value}
 
     @{
         URL64   = $url64
