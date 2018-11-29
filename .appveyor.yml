@@ -20,7 +20,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: JamieMagee/chocolatey
   github_api_key:
-    secure: yicFuVwWptUmfwMRYgOk6ArfDT/6gIzSvo2IUbDCG8x9d4TYJiF0CfLvinNqymQm #https://ci.appveyor.com/tools/encrypt
+    secure: z71jhHkLcK0OENCHqbg1ZWUnZSHJqNtegudZFBClujta56pAaLQEJ3OgZrkUP49n #https://ci.appveyor.com/tools/encrypt
 
   # Mail credentials - for error notifications
   mail_user:
@@ -38,7 +38,7 @@ environment:
   gist_id: bab06468143f49adc9b0e65eb1e8c5be
 
   # Force test: gist id for test results
-  gist_id_test:
+  gist_id_test: 37088abdf58e502dfc5c06f086d06463
 
   # Chocolatey API key - to push updated packages
   api_key:
