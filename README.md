@@ -1,5 +1,5 @@
 [![](https://ci.appveyor.com/api/projects/status/github/JamieMagee/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/JamieMagee/chocolatey-packages)
-[Update status](https://gist.github.com/JamieMagee/YOUR_GIST_ID_HERE)
+[Update status](https://gist.github.com/JamieMagee/bab06468143f49adc9b0e65eb1e8c5be)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey/Jammie](https://chocolatey.org/profiles/Jammie)
 
