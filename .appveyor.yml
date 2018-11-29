@@ -52,6 +52,8 @@ init:
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
+- ps: rm C:\ProgramData\chocolatey -Recurse -Force
+- ps: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 - git --version
 - choco --version
 - ps: |
