@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>zulu9</id>
-    <version></version>
+    <version>9.0.7.1</version>
     <packageSourceUrl>https://github.com/JamieMagee/chocolatey/tree/master/zulu9</packageSourceUrl>
     <title>Zulu 9</title>
     <authors>Azul Systems</authors>
