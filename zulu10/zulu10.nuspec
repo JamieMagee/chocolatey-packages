@@ -16,4 +16,7 @@
     <releaseNotes>http://docs.azul.com/zulu/zulurelnotes/</releaseNotes>
     <tags>java java10 jdk jdk10 openjdk zulu admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
