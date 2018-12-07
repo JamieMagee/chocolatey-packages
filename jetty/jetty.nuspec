@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>jetty</id>
+    <title>Jetty</title>
+    <packageSourceUrl>https://github.com/JamieMagee/chocolatey-packages/tree/master/jetty</packageSourceUrl>
+    <authors>The Eclipse Foundation</authors>
+    <version>9.3.25.v20180904</version>
+    <projectUrl>https://www.eclipse.org/jetty/</projectUrl>
+    <summary>Jetty servlet engine and HTTP server</summary>
+    <description>Jetty servlet engine and HTTP server. Jetty provides an Web server and javax.servlet container, plus support for SPDY, Web Sockets, OSGi, JMX, JNDI, JASPI, AJP and many other integrations.</description>
+    <owners>The Eclipse Foundation</owners>
+    <licenseUrl>https://www.eclipse.org/jetty/licenses.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.jsdelivr.net/gh/JamieMagee/chocolatey-packages/jetty/icons/jetty.svg</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
