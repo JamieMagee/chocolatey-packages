@@ -16,7 +16,7 @@ function global:au_GetLatest {
 
   $url = $download_page.links | ? href -match '^.*.zip$' | % href | select -First 1
   $zip = ((Split-Path $url -Leaf) -split "-")[2]
-  $version = $zip.Substring(0, $zip.Length - 4)
+  $version = $zip.Substring(0, $zip.Length - 4).Replace('v', '')
 
   @{
     URL   = $url
