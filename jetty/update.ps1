@@ -5,8 +5,8 @@ $releases = 'https://www.eclipse.org/jetty/download.html'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum)'"
+      "(?i)(^\s*url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
     }
   }
 }
@@ -19,7 +19,7 @@ function global:au_GetLatest {
   $version = $zip.Substring(0, $zip.Length - 4).Replace('v', '')
 
   @{
-    URL   = $url
+    URL32   = $url
     Version = $version
   }
 }
