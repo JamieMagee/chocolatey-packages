@@ -2,6 +2,11 @@ import-module au
 
 $releases = 'https://www.eclipse.org/jetty/download.html'
 
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.URL32 -Algorithm $Latest.ChecksumType32
+}
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -12,11 +17,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = (New-Object System.Net.WebClient).DownloadString($releases)
-  $html = New-Object -ComObject "HTMLFile"
-  $html.IHTMLDocument2_write($download_page)
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url = $html.links | Where-Object href -match '^.*.zip$' | ForEach-Object href | Select-Object -First 1
+  $url = $download_page.links | Where-Object href -match '^.*.zip$' | ForEach-Object href | Select-Object -First 1
   $zip = ((Split-Path $url -Leaf) -split "-")[2]
   $version = $zip.Substring(0, $zip.Length - 4).Replace('v', '')
 
@@ -26,4 +29,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
