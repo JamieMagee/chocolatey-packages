@@ -13,6 +13,7 @@
     <licenseUrl>https://www.eclipse.org/jetty/licenses.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/JamieMagee/chocolatey-packages/jetty/icons/jetty.png</iconUrl>
+    <tags>jetty</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
