@@ -5,7 +5,7 @@
     <title>Jetty</title>
     <packageSourceUrl>https://github.com/JamieMagee/chocolatey-packages/tree/master/jetty</packageSourceUrl>
     <authors>The Eclipse Foundation</authors>
-    <version>9.4.14.20181114</version>
+    <version>9.4.14.20190104</version>
     <projectUrl>https://www.eclipse.org/jetty/</projectUrl>
     <summary>Jetty servlet engine and HTTP server</summary>
     <description>Jetty servlet engine and HTTP server. Jetty provides an Web server and javax.servlet container, plus support for SPDY, Web Sockets, OSGi, JMX, JNDI, JASPI, AJP and many other integrations.</description>
