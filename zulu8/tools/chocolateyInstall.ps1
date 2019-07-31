@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName   = 'zulu8'
   fileType      = 'msi'
-  url64bit      = 'https://cdn.azul.com/zulu/bin/zulu8.38.0.13-ca-jdk8.0.212-win_x64.msi'
-  checksum64    = 'fb2f03b05998633eb3ea29de7bc5631d63695f689730201220ce324e8d018769'
+  url64bit      = 'https://cdn.azul.com/zulu/bin/zulu8.40.0.25-ca-jdk8.0.222-win_x64.msi'
+  checksum64    = 'c093b414671b9f3048d3c498f76a7830df7e4b12838ed365a73885481055a37b'
   checksumType64= 'sha256'
   silentArgs    = '/qn /norestart'
   validExitCodes= @(0)
