@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = curl.exe $releases -d 'action=bundles_filter_query&action=search_bundles'
 
-  $release = (($download_page | ConvertFrom-Json) | Where-Object -FilterScript { $_.os_slug -eq "windows" -and $_.arch_slug -eq "x86-64-bit" -and $_.category_slug -eq "java-13" -and $_.packaging_slug -eq "jdk" } | Select-Object -Last 1).bundles | Where-Object {$_.extension -eq "msi"}
+  $release = (($download_page | ConvertFrom-Json) | Where-Object -FilterScript { $_.os_slug -eq "windows" -and $_.arch_slug -eq "x86-64-bit" -and $_.category_slug -eq "java-13" -and $_.packaging_slug -eq "jdk" } | Select-Object -First 1).bundles | Where-Object {$_.extension -eq "msi"}
 
   $url64 = $release.link
   $version = (Split-Path $url64 -Leaf | Select-String -Pattern '^zulu13((\.\d+)+)').Matches.Value.Substring(4)
