@@ -1,3 +1,5 @@
+name: Update
+
 on:
   push:
     branches:
@@ -41,8 +43,6 @@ jobs:
         shell: powershell
         run: |
           $ErrorActionPreference = 'Continue'
-
-          if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
 
           if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
               switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
