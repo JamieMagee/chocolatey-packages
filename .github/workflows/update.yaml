@@ -21,6 +21,10 @@ jobs:
   update:
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
       - name: Configure git
         run: |
           git config --global user.email "chocolatey@realdimensions.net"
