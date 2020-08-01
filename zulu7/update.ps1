@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://www.azul.com/wp-admin/admin-ajax.php'
+$releases = 'https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=7&bundle_type=jdk&features=&ext=msi&os=windows&arch=x86&hw_bitness=64'
 
 function global:au_SearchReplace {
   @{
@@ -12,17 +12,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = curl.exe $releases -d 'action=bundles_filter_query&action=search_bundles'
+  $release = Invoke-WebRequest -Uri $releases | ConvertFrom-Json
 
-  $release = (($download_page | ConvertFrom-Json) | Where-Object -FilterScript { $_.os_slug -eq "windows" -and $_.arch_slug -eq "x86-64-bit" -and $_.category_slug -eq "java-7-lts" -and $_.packaging_slug -eq "jdk" } | Select-Object -First 1).bundles | Where-Object {$_.extension -eq "msi"}
-
-  $url64 = $release.link
-  $version = (Split-Path $url64 -Leaf | Select-String -Pattern '^zulu7((\.\d+)+)').Matches.Value.Substring(4)
+  $url = $release.url
+  $version = $release.zulu_version -Join '.'
+  $checksum = $release.sha256_hash
 
   @{
-    URL64   = $url64
-    Version = $version
+    URL64          = $url
+    Version        = $version
+    Checksum64     = $checksum
+    ChecksumType64 = 'sha256'
   }
 }
 
-update -ChecksumFor 64
+update -ChecksumFor none
