@@ -14,7 +14,7 @@
     <description>Zulu is a certified build of OpenJDK that is fully compliant with the Java SE standard. Zulu is 100% open source and freely downloadable. Now Java developers, system administrators and end users can enjoy the full benefits of open source Java with deployment flexibility and control over upgrade timing.</description>
     <summary>Zulu is a certified build of OpenJDK that is fully compliant with the Java SE standard</summary>
     <releaseNotes>http://docs.azul.com/zulu/zulurelnotes/</releaseNotes>
-    <tags>java java13 jdk jdk13 openjdk zulu admin</tags>
+    <tags>java java14 jdk jdk14 openjdk zulu admin</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
