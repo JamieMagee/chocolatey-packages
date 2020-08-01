@@ -65,8 +65,3 @@ jobs:
           }
 
           ./update_all.ps1 -ForcedPackages $forced
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: au_temp
-          path: $Env:TEMP\chocolatey\au\*

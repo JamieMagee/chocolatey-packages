@@ -4,7 +4,7 @@
     <id>zulu14</id>
     <version>14.29.23.0</version>
     <packageSourceUrl>https://github.com/JamieMagee/chocolatey-packages/tree/master/zulu14</packageSourceUrl>
-    <title>Zulu</title>
+    <title>Zulu 14</title>
     <authors>Azul Systems</authors>
     <owners>nyyu, Jammie</owners>
     <projectUrl>https://www.azul.com/products/zulu-enterprise/</projectUrl>
