@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName    = 'jetty'
   unzipLocation  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-  url            = 'https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.31.v20200723/jetty-distribution-9.4.31.v20200723.zip'
-  checksum       = 'd7f2facbfcf1cf935887f414d5ad603af358625774f2c64d430cc094f165ef1b'
+  url            = 'https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.32.v20200930/jetty-distribution-9.4.32.v20200930.zip'
+  checksum       = 'cdaf6823dd820eea759fb26c2769f1ab7cdccd9b1909c2d3f81d36e86f3b2dab'
   checksumType   = 'sha256'
 }
 
