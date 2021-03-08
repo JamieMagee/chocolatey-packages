@@ -6,7 +6,7 @@
     <packageSourceUrl>https://github.com/JamieMagee/chocolatey-packages/tree/master/zulu14</packageSourceUrl>
     <title>Zulu 14</title>
     <authors>Azul Systems</authors>
-    <owners>nyyu, Jammie</owners>
+    <owners>Jammie</owners>
     <projectUrl>https://www.azul.com/products/zulu-enterprise/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/JamieMagee/chocolatey-packages/zulu14/icons/zulu.svg</iconUrl>
     <licenseUrl>https://www.azul.com/products/zulu-and-zulu-enterprise/zulu-terms-of-use/</licenseUrl>
