@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://www.eclipse.org/jetty/download.html'
+$releases = 'https://www.eclipse.org/jetty/download.php'
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
@@ -19,9 +19,9 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url = $download_page.links | Where-Object href -match '^.*.zip$' | ForEach-Object href | Select-Object -First 1
+  $url = $download_page.links | Where-Object href -match '^.*.zip$' | ForEach-Object href | Select-Object -Last 1
   $zip = ((Split-Path $url -Leaf) -split "-")[2]
-  $version = $zip.Substring(0, $zip.Length - 4).Replace('v', '')
+  $version = $zip.Substring(0, $zip.Length - 4)
 
   @{
     URL32   = $url
